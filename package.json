@@ -40,6 +40,5 @@
   },
   "devDependencies": {
     "gh-pages": "^6.1.0"
-  },
-  "homepage": "https://greenfields-pair.github.io/greenfields-pair.github.io"
+  }
 }
