@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import {
   CardPairing,
   Clients,
@@ -12,14 +12,26 @@ import { PAIRING_DATA } from "resources/snack-pairing";
 const Home = () => {
 
   const paired_snacks = PAIRING_DATA.slice(0, 3);
+  const [isLoading, setIsLoading] = useState(false);
+  const [timeoutId, setTimeoutId] = useState(null);
 
   useEffect(() => {
-    console.log("data: ", paired_snacks);
-  }, [paired_snacks]);
+    setIsLoading(true);
+    const timeout = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+    setTimeoutId(timeout);
+
+    return () => {
+      if (timeoutId !== null) {
+        clearTimeout(timeoutId);
+      } 
+    }
+  }, []);
 
   return (
     <>
-      <Loading />
+      {isLoading && <Loading />}
       <div className="page-wraper">
         <Header />
 

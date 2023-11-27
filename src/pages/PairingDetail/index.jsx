@@ -9,6 +9,9 @@ const PairingDetail = () => {
   const { id } = useParams();
   const [detail, setDetail] = useState({});
 
+  const [isLoading, setIsLoading] = useState(false);
+  const [timeoutId, setTimeoutId] = useState(null);
+
   const getDetail = useCallback(() => {
     const filteredItem = PAIRING_DATA.filter((value) => value.uuid === id);
 
@@ -25,6 +28,20 @@ const PairingDetail = () => {
     }
   }, [id, getDetail]);
 
+  useEffect(() => {
+    setIsLoading(true);
+    const timeout = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+    setTimeoutId(timeout);
+
+    return () => {
+      if (timeoutId !== null) {
+        clearTimeout(timeoutId);
+      } 
+    }
+  }, []);
+
   if ("id" in detail) {
     const ratingItems = [];
 
@@ -40,7 +57,7 @@ const PairingDetail = () => {
 
     return (
       <>
-        <Loading />
+        {isLoading && <Loading />}
         <div className="page-wraper">
           <Header />
 

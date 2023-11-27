@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { CardPairing, Footer, Header, Loading } from "../../components";
 import { PAIRING_DATA } from "resources/snack-pairing";
 import { Link } from "react-router-dom";
@@ -6,9 +6,26 @@ import { Link } from "react-router-dom";
 const PairingList = () => {
   const paired_snacks = PAIRING_DATA;
 
+  const [isLoading, setIsLoading] = useState(false);
+  const [timeoutId, setTimeoutId] = useState(null);
+
+  useEffect(() => {
+    setIsLoading(true);
+    const timeout = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+    setTimeoutId(timeout);
+
+    return () => {
+      if (timeoutId !== null) {
+        clearTimeout(timeoutId);
+      } 
+    }
+  }, []);
+
   return (
     <>
-      <Loading />
+      {isLoading && <Loading />}
       <div className="page-wraper">
         <Header />
 

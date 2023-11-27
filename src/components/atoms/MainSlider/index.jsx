@@ -309,7 +309,7 @@ const MainSlider = () => {
               data-easein="default"
               data-easeout="default"
               data-masterspeed="default"
-              data-thumb="images/main-slider/slider-2/image-2.jpg"
+              data-thumb="images/main-slider/slider-1/image-2.jpg"
               data-rotate="0"
               data-fstransition="fade"
               data-fsmasterspeed="300"
