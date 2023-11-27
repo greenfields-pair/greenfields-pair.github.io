@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/greenfields-pair.github.io/static/css/main.f855e6bc.css",
-    "main.js": "/greenfields-pair.github.io/static/js/main.fbec31e6.js",
-    "static/js/787.e1c7ae39.chunk.js": "/greenfields-pair.github.io/static/js/787.e1c7ae39.chunk.js",
-    "index.html": "/greenfields-pair.github.io/index.html",
-    "main.f855e6bc.css.map": "/greenfields-pair.github.io/static/css/main.f855e6bc.css.map",
-    "main.fbec31e6.js.map": "/greenfields-pair.github.io/static/js/main.fbec31e6.js.map",
-    "787.e1c7ae39.chunk.js.map": "/greenfields-pair.github.io/static/js/787.e1c7ae39.chunk.js.map"
+    "main.css": "/static/css/main.f855e6bc.css",
+    "main.js": "/static/js/main.fbb35650.js",
+    "static/js/787.e1c7ae39.chunk.js": "/static/js/787.e1c7ae39.chunk.js",
+    "index.html": "/index.html",
+    "main.f855e6bc.css.map": "/static/css/main.f855e6bc.css.map",
+    "main.fbb35650.js.map": "/static/js/main.fbb35650.js.map",
+    "787.e1c7ae39.chunk.js.map": "/static/js/787.e1c7ae39.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f855e6bc.css",
-    "static/js/main.fbec31e6.js"
+    "static/js/main.fbb35650.js"
   ]
 }
